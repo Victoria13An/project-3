@@ -1,0 +1,111 @@
+body {
+  background: linear-gradient(to bottom, #1D2F30, #1D2F304D); 
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 20px;
+}
+
+
+h1{
+    align-items: center;
+    size: 48px;
+    color: #ffffff;
+}
+/* кнопки выбора */
+.selector {
+  margin-bottom: 40px;
+}
+#show-login, #show-register {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 28px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #0B191A; /* цвет рамки для кнопок */
+  color: white;
+}
+#show-login:hover, #show-register:hover {
+  background-color: #000000;
+}
+
+/* формы */
+.forms-container {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.form-box {
+  background-color: white;
+  padding: 20px;
+  border: 3px solid #0B191A; /* новый цвет рамки */
+  border-radius: 10px;
+  width: 300px;
+}
+
+/* скрытые формы по умолчанию (используем класс hidden) */
+.hidden {
+  display: none;
+}
+
+h2 {
+  text-align: center;
+  color: #0B191A; /* цвет заголовка */
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 2px solid #0B191A; /* рамка вокруг полей */
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #0B191A; /* цвет кнопок */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #000000;
+}
+
+.cells-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* расстояние между ячейками */
+  margin-top: 25px; /* чуть ниже кнопок */
+}
+
+.cell {
+  width: 300px; /* ширина ячейки */
+  height: 300px; /* высота ячейки */
+  overflow: hidden;
+  border-radius: 8px; /* скругление углов, по желанию */
+  border: 2px solid #0B191A; /* рамка, по желанию */
+}
+
+.cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* чтобы картинка не искажалась */
+}
