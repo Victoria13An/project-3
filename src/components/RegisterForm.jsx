@@ -1,15 +1,14 @@
-import {useState} from 'react';
-import SixDigitOrLetterCodeInput from './SixDigitOrLetterCodeInput';
+import { useState } from "react";
+import SixDigitOrLetterCodeInput from "./SixDigitOrLetterCodeInput";
 
 export function RegisterForm() {
-	const [code, setCode] = useState('');
-	
-	 const handleCodeComplete = (enteredCode) => {
-    setCode(enteredCode);
-    console.log('Введенный код:', enteredCode);
-  };
-	
-	
+	const [code, setCode] = useState("");
+
+	const handleCodeComplete = (enteredCode) => {
+		setCode(enteredCode);
+		console.log("Введенный код:", enteredCode);
+	};
+
 	return (
 		<div className="form-box hidden" id="register-form">
 			<h2>Регистрация</h2>
@@ -28,18 +27,10 @@ export function RegisterForm() {
 					required
 				/>
 
-				 <label htmlFor="reg-code">Код:</label>
-        <SixDigitOrLetterCodeInput onComplete={handleCodeComplete} />
+				<label htmlFor="reg-code">Код:</label>
+				<SixDigitOrLetterCodeInput onComplete={handleCodeComplete} />
 
-        {/* Для взаимодействия с code, например, скрыто */}
-        {/* <input type="hidden" name="reg-code" value={code} /> */}
-
-        {/* Можно отображать введённый код */}
-        {code.length === 6 && (
-          <div>
-            Код введён: {code}
-          </div>
-        )}
+				{code.length === 6 && <div>Код введён: {code}</div>}
 
 				<button type="submit">Зарегистрироваться</button>
 			</form>
