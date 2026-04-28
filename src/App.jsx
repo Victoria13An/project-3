@@ -2,10 +2,12 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 // import "./App.css";
-import { Hero } from "./components/Hero";
+import { Cart } from "./components/Cart";
+import { OlderForm } from "./components/OlderForm";
+import { ProductForm } from "./components/OlderForm";
+import { ProductCard } from "./components/ProductCard";
 import { LoginForm } from "./components/LofinForm";
 import { RegisterForm } from "./components/RegisterForm";
-import { NavLink, Route, Routes } from "react-router";
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -19,7 +21,7 @@ function App() {
 						<>
 							<header>
 								<h1>
-									Крупнейшая коллекция природных артефактов
+									Podval
 								</h1>
 								<div
 									className="initial-buttons"
@@ -35,7 +37,6 @@ function App() {
 									</NavLink>
 								</div>
 							</header>
-							<Hero />
 						</>
 					}
 				/>
